@@ -4,6 +4,7 @@ import configParticles from '../config/configParticles'
 import Pattern from '../assets/bg-pattern-alt.png'
 import { title } from '../utils/title'
 import styled from 'styled-components'
+import Typical from 'react-typical'
 import Navbar from './Navbar'
 
 
@@ -45,12 +46,20 @@ const Header = () => {
                         if (itemIndex === index - 1 || (index === 0 && itemIndex === title.length - 1)) { position = 'lastSlide' }
                         return (
                             <article key={id} className={position}>
-                                <h3>{description}</h3>
+                                <div className="title-container">
+                                    <h3>{description}
+                                    </h3>
+                                    <div className="box-red"></div>
+                                    <div className="box-yellow"></div>
+
+                                </div>
+
                             </article>
                         )
                     })}
 
                 </Wrapper>
+
                 <div className='container'>
                     <img src={Pattern} alt="" />
                 </div>
@@ -69,9 +78,22 @@ height:350px;
   position: relative;
 bottom:-10rem;
  overflow:hidden;
+
+ .title-container{
+    
+ }
+ .box-yellow{
+     background-image:linear-gradient(to right, var(--clr-yellow) 10%, transparent 50%);
+     width:100%;
+     height:1rem;
+ }
+ .box-red{
+    background-image:linear-gradient(to right, var(--clr-red), transparent 70%);
+     width:100%;
+     height:1rem;
+ }
 h3 {
-  line-height: 1.8;
-  margin:0;
+  line-height: 1.5;
 }
 article {
   position: absolute;
@@ -92,6 +114,11 @@ article.lastSlide {
 article.nextSlide {
     opacity:0;
     transform: translateX(100%);
+}
+@media (min-width:768px){
+    h3{
+        font-size:4rem;
+    }
 }
 `
 export default Header
