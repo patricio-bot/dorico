@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Particles from 'react-particles-js'
 import configParticles from '../config/configParticles'
-import Pattern from '../assets/bg-pattern-alt.png'
+import Pattern from '../assets/bg-pattern-mid.png'
 import { title } from '../utils/title'
 import styled from 'styled-components'
 import Typical from 'react-typical'
@@ -38,7 +38,7 @@ const Header = () => {
                     <Particles height='100vh' width='100vw' params={configParticles} />
                 </div>
 
-                <Wrapper>
+                <Wrapper className='section-center'>
                     {title.map((item, itemIndex) => {
                         const { description, id } = item
                         let position = 'nextSlide'
@@ -70,7 +70,6 @@ const Header = () => {
 }
 const Wrapper = styled.div`
 height:350px;
-  width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content:center;
@@ -79,9 +78,6 @@ height:350px;
 bottom:-10rem;
  overflow:hidden;
 
- .title-container{
-    
- }
  .box-yellow{
      background-image:linear-gradient(to right, var(--clr-yellow) 10%, transparent 50%);
      width:100%;

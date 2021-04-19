@@ -1,4 +1,5 @@
 import Header from './Header'
 import Navbar from './Navbar'
-
-export { Header, Navbar }
+import Sidebar from './Sidebar'
+import SectionIntro from './SectionIntro'
+export { Header, Navbar, Sidebar, SectionIntro }
