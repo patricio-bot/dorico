@@ -195,7 +195,7 @@ img {
   position: relative;
 }
 /****** nav ******/
-.nav {
+#nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -206,6 +206,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 1rem 2rem;
+  background-color: var(--clr-grey-10);
 }
 .nav-center {
   width: 100%;
@@ -257,7 +258,7 @@ img {
   opacity: 1;
 }
 .scrolled {
-  background-color: var(--bg-transparent);
+  background-color: var(--clr-grey-10) !important;
   box-shadow: var(--dark-shadow);
 }
 .nav-button {
@@ -312,6 +313,9 @@ img {
 }
 
 @media screen and (min-width: 900px) {
+  #nav {
+    background-color: initial;
+  }
   .nav-center {
     max-width: var(--max-width);
   }
@@ -334,9 +338,7 @@ img {
   z-index: 4;
   transition: var(--transition);
 }
-.sidebar h1 {
-  color: white;
-}
+
 .sidebar-overlay {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -348,7 +350,7 @@ img {
   transition: var(--transition);
 }
 .sidebar-menu-items {
-  color: var(--clr-grey-8);
+  color: var(--clr-grey-10);
   padding: 1rem 2rem;
   margin: 8rem auto;
   display: flex;
@@ -367,6 +369,15 @@ img {
 }
 .show-sidebar {
   right: 0;
+}
+@media screen and (min-width: 600px) {
+  .sidebar-menu-items a {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+  }
+  .sidebar-menu-items a:hover {
+    padding-left: 6rem;
+  }
 }
 @media screen and (min-width: 900px) {
   .sidebar,
@@ -476,8 +487,8 @@ img {
   font-weight: 400;
 }
 .principle span {
-  width: 4rem;
-  height: 4rem;
+  width: 6rem;
+  height: 6rem;
   display: grid;
   margin: 0 auto;
   place-items: center;
@@ -487,7 +498,7 @@ img {
   color: var(--clr-grey-1);
 }
 .principle span svg {
-  font-size: 2.8rem;
+  font-size: 3rem;
 }
 @media screen and (min-width: 576px) {
   .principios-center {
@@ -504,4 +515,25 @@ img {
   .section-principios-container {
     transform: translateY(10rem);
   }
+}
+/**** section servicios *****/
+.section-services {
+  background-color: var(--clr-grey-10);
+  padding: 10rem 0;
+}
+
+/***** footer ******/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--clr-grey-9);
+  padding: 4rem 1rem;
+}
+footer h5,
+footer a {
+  font-size: 2rem;
+  margin-bottom: initial;
+  font-weight: 400;
 }

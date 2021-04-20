@@ -20,7 +20,7 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll)
     })
     return (
-        <nav className={scrolled ? 'nav scrolled' : 'nav'}>
+        <nav id='nav' className={scrolled ? 'scrolled' : null}>
             <div className='nav-center'>
                 <div className="nav-header">
                     <div className="logo"><img className='logo' src={logo} alt="logo dorico" /></div>

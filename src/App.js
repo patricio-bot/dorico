@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
-import { Navbar, Sidebar } from './components'
+import { Navbar, Sidebar, Footer } from './components'
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
           </Route>
 
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
