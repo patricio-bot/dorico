@@ -2,9 +2,9 @@ import React from 'react'
 
 const SectionValor = () => {
     return (
-        <section className='section-valor '>
+        <section id='valor' className='section-valor '>
             <div className="section-valor-box section-center">
-                <div id='valor' className="title">
+                <div className="title">
                     <h3>Propuesta de Valor</h3>
                     <div className="underline"></div>
                 </div>

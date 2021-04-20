@@ -23,7 +23,7 @@ const Navbar = () => {
         <nav id='nav' className={scrolled ? 'scrolled' : null}>
             <div className='nav-center'>
                 <div className="nav-header">
-                    <div className="logo"><img className='logo' src={logo} alt="logo dorico" /></div>
+                    <div className="logo" onClick={() => window.scrollTo(0, 0)}><img className='logo' src={logo} alt="logo dorico" /></div>
 
                     <div className="nav-button" onClick={isSidebarOpen ? closeSidebar : openSidebar} >
                         <div className={isSidebarOpen ? "burger lines close" : "burger lines"}>
