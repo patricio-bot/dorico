@@ -1,11 +1,16 @@
 import React from 'react'
-import { Header, SectionIntro } from '../components'
+import { Header, SectionIntro, SectionValor, SectionPrincipios } from '../components'
 
 export const Home = () => {
     return (
         <>
             <Header />
-            <SectionIntro />
+            <main>
+                <SectionIntro />
+                <SectionValor />
+                <SectionPrincipios />
+            </main>
+
         </>
 
     )
