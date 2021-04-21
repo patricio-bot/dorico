@@ -29,13 +29,14 @@ const Servicios = () => {
                             </div>
                         </Fade>
                         <Fade right delay={400}>
+
                             <div className="finance-description">
 
                                 {finance.map((item) => {
-                                    const { id, title, details } = item
+                                    const { id, title, details, icon } = item
                                     return (
                                         <dl key={id}>
-                                            <dt className='service-title-detail'>{title}</dt>
+                                            <dt className='service-title-detail'>{icon}{title}</dt>
                                             {details && details.map((detail, index) => {
                                                 return <dd className='finance-detail-box' key={index}>{detail}</dd>
                                             })
@@ -43,6 +44,7 @@ const Servicios = () => {
                                         </dl>
                                     )
                                 })}
+
                             </div>
                         </Fade>
                     </div>
@@ -61,10 +63,11 @@ const Servicios = () => {
                         <Fade left delay={400}>
                             <div className="estate-description">
                                 <ul>
-                                    {estate.map((item, index) => {
-                                        const { id, title } = item
+                                    {estate.map((item) => {
+                                        const { id, title, icon } = item
                                         return (
-                                            <li className='service-title-detail' key={id}>{title}</li>
+                                            <li className='service-title-detail' key={id}>
+                                                <span>{icon}</span>{title}</li>
                                         )
 
                                     })}

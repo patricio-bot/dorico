@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, SectionIntro, SectionValor, SectionPrincipios, Servicios } from '../components'
+import { Header, SectionIntro, SectionValor, SectionPrincipios, Servicios, Contact } from '../components'
 
 export const Home = () => {
     return (
@@ -10,6 +10,7 @@ export const Home = () => {
                 <SectionValor />
                 <SectionPrincipios />
                 <Servicios />
+                <Contact />
             </main>
 
         </>

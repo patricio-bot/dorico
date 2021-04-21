@@ -6,4 +6,5 @@ import SectionValor from './SectionValor'
 import SectionPrincipios from './SectionPrincipios'
 import Servicios from './Servicios'
 import Footer from './Footer'
-export { Header, Navbar, Sidebar, SectionIntro, SectionValor, SectionPrincipios, Servicios, Footer }
+import Contact from './Contact'
+export { Header, Navbar, Sidebar, SectionIntro, SectionValor, SectionPrincipios, Servicios, Footer, Contact }
