@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { useGlobalContext } from '../context/context'
 import logo from '../assets/logo-dorico.svg'
 import { links } from '../utils/links'
+import * as Scroll from 'react-scroll'
 
+let Link = Scroll.Link
 const Navbar = () => {
     const { isSidebarOpen, closeSidebar, openSidebar } = useGlobalContext()
 
@@ -40,7 +42,7 @@ const Navbar = () => {
                         const { id, url, text } = oneLink
                         return (
                             <li key={id}>
-                                <a href={url}>{text}</a>
+                                <Link to={url}>{text}</Link>
                             </li>
                         )
                     })}

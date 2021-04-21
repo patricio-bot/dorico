@@ -4,8 +4,7 @@ import configParticles from '../config/configParticles'
 import Pattern from '../assets/bg-pattern-mid.png'
 import { title } from '../utils/title'
 import styled from 'styled-components'
-import Typical from 'react-typical'
-import Navbar from './Navbar'
+
 
 
 const Header = () => {

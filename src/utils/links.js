@@ -1,17 +1,17 @@
 export const links = [
     {
         id: 1,
-        url: '#valor',
+        url: 'valor',
         text: 'Propuesta de Valor'
     },
     {
         id: 2,
-        url: '#servicios',
+        url: 'servicios',
         text: 'Servicios y Productos'
     },
     {
         id: 3,
-        url: '#contacto',
+        url: 'contacto',
         text: 'Contacto'
     },
 

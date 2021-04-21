@@ -1,7 +1,7 @@
 import {
     BiAnalyse
 } from 'react-icons/bi'
-import { FaHandHoldingUsd, FaNetworkWired } from 'react-icons/fa'
+import { FaHandHoldingUsd } from 'react-icons/fa'
 import { BsFillPeopleFill } from 'react-icons/bs'
 
 export const principles = [

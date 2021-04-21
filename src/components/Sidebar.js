@@ -1,6 +1,9 @@
 import React from 'react'
 import { useGlobalContext } from '../context/context'
 import { links } from '../utils/links'
+import * as Scroll from 'react-scroll'
+
+let Link = Scroll.Link
 const Sidebar = () => {
     const { isSidebarOpen, closeSidebar } = useGlobalContext()
     return (
@@ -11,7 +14,9 @@ const Sidebar = () => {
                     {links.map((oneLink) => {
                         const { id, url, text } = oneLink
                         return (
-                            <li key={id} onClick={closeSidebar}><a href={url}>{text}</a></li>
+                            <li key={id}>
+                                <Link onClick={closeSidebar} to={url}>{text}</Link>
+                            </li>
                         )
                     })}
 
