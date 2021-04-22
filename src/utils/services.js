@@ -3,7 +3,8 @@ export const finance = [
     {
         id: 1,
         icon: <BiCircle />,
-        title: 'Levantamiento de deuda'
+        title: 'Reestructuración de pasivos',
+        details: ['Consolidación de créditos', 'Pasar de corto a largo plazo para disminuir la carga financiera']
     },
     {
         id: 2,
@@ -17,14 +18,9 @@ export const finance = [
         title: 'Inversión en activo fijo',
         details: ['Propiedades', 'Maquinarias', 'Terrenos', 'Leasing']
     },
+
     {
         id: 4,
-        icon: <BiCircle />,
-        title: 'Reestructuración de pasivos',
-        details: ['Consolidación de créditos', 'Pasar de corto a largo plazo para disminuir la carga financiera']
-    },
-    {
-        id: 5,
         icon: <BiCircle />,
         title: 'Boletas y pólizas de garantía',
         details: ['Para garantizar contratos', 'Adelantar flujos']
