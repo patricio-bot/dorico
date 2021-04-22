@@ -15,7 +15,7 @@ const Sidebar = () => {
                         const { id, url, text } = oneLink
                         return (
                             <li key={id}>
-                                <Link onClick={closeSidebar} to={url}>{text}</Link>
+                                <Link smooth={true} onClick={closeSidebar} to={url}>{text}</Link>
                             </li>
                         )
                     })}

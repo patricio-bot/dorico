@@ -231,6 +231,7 @@ img {
 }
 .logo {
   width: 50%;
+  cursor: pointer;
 }
 .logo img {
   height: 4rem;
