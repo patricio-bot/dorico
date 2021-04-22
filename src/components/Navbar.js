@@ -5,6 +5,7 @@ import { links } from '../utils/links'
 import * as Scroll from 'react-scroll'
 
 let Link = Scroll.Link
+let scroll = Scroll.animateScroll
 const Navbar = () => {
     const { isSidebarOpen, closeSidebar, openSidebar } = useGlobalContext()
 
@@ -21,11 +22,14 @@ const Navbar = () => {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
     })
+    const scrollToTop = () => {
+        scroll.scrollToTop()
+    }
     return (
         <nav id='nav' className={scrolled ? 'scrolled' : null}>
             <div className='nav-center'>
                 <div className="nav-header">
-                    <div className="logo" onClick={() => window.scrollTo(0, 0)}><img className='logo' src={logo} alt="logo dorico" /></div>
+                    <div className="logo" onClick={scrollToTop}><img className='logo' src={logo} alt="logo dorico" /></div>
 
                     <div className="nav-button" onClick={isSidebarOpen ? closeSidebar : openSidebar} >
                         <div className={isSidebarOpen ? "burger lines close" : "burger lines"}>
@@ -42,7 +46,7 @@ const Navbar = () => {
                         const { id, url, text } = oneLink
                         return (
                             <li key={id}>
-                                <Link to={url}>{text}</Link>
+                                <Link smooth={true} to={url}>{text}</Link>
                             </li>
                         )
                     })}
