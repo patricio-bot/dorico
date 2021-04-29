@@ -46,7 +46,7 @@ const Navbar = () => {
                         const { id, url, text } = oneLink
                         return (
                             <li key={id}>
-                                <Link smooth={true} to={url}>{text}</Link>
+                                <Link smooth={true} offset={20} to={url}>{text}</Link>
                             </li>
                         )
                     })}
