@@ -444,11 +444,12 @@ img {
 }
 .section-valor-box {
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
   background-color: var(--clr-grey-10);
   width: 80%;
   padding: 6rem 2rem;
-  transform: translateY(5rem);
+  transform: translate(-50%, -50%);
 }
 .section-valor-box p {
   font-size: 1.6rem;
@@ -519,9 +520,6 @@ img {
   }
   .principios-center {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .section-principios-container {
-    transform: translateY(10rem);
   }
 }
 /**** section servicios *****/
